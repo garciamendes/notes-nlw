@@ -1,6 +1,13 @@
+import { Home } from './containers/home'
+import { Toaster } from 'sonner'
+import { NoteProvider } from './context/noteContext'
+
 export const App = () => {
 
   return (
-    <h1>teste</h1>
+    <NoteProvider>
+      <Toaster richColors />
+      <Home />
+    </NoteProvider>
   )
 }
